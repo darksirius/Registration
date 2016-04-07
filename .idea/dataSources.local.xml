@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Registration: production" uuid="2e30ea76-ff7f-4187-8fdf-05aea14353ac">
+      <first-sync>true</first-sync>
+      <user-name>Registration</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddff8dfefdfeddfe3dff9dffedff8dfebdffedfe3dfe5dfe4dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails Registration: development" uuid="12960efe-8933-4949-b47a-5f0cbca5a2bf">
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+      <user-password>df93df84df9cdf9bdf92df92df9cdf9bdf9ddf98dfefdf92</user-password>
+    </data-source>
+    <data-source name="Rails Registration: test" uuid="54bbb924-ca59-442c-9ed9-01b8d91f0f9f">
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+      <user-password>df93df84df9cdf9bdf92df92df9cdf9bdf9ddf98dfefdf92</user-password>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,84 @@
+
+<div class="wizard" data-initialize="wizard" id="myWizard">
+  <div class="steps-container">
+    <ul class="steps">
+      <li data-step="1" data-name="campaign" class="active">
+        <span class="badge">1</span>Responsable
+        <span class="chevron"></span>
+      </li>
+      <li data-step="2">
+        <span class="badge">2</span>Recipients
+        <span class="chevron"></span>
+      </li>
+      <li data-step="3" data-name="template">
+        <span class="badge">3</span>Template
+        <span class="chevron"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="actions">
+    <button type="button" class="btn btn-default btn-prev">
+      <span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+    <button type="button" class="btn btn-primary btn-next" data-last="Complete">Next
+      <span class="glyphicon glyphicon-arrow-right"></span>
+    </button>
+  </div>
+
+  <div class="step-content">
+    <div class="step-pane active sample-pane alert" data-step="1">
+        <%= render 'personas/form', :@persona => Persona.new %>
+    </div>
+
+    <div class="step-pane active sample-pane alert" data-step="2">
+
+
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Agouter un eleve</button>
+
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center" id="gridSystemModalLabel">Modal title</h4>
+            </div>
+            <div class="large">
+
+              <%= render 'students/form', :@student => Student.new %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Table des eleve</div>
+
+        <table class="table">
+
+          <tr>
+            <th>Nom: </th>
+            <th>Prenom:</th>
+
+            <th>Numero de Document: </th>
+          </tr>
+          <tr>
+
+          </tr>
+        </table>
+      </div>
+
+      </div>
+
+
+    <div class="step-pane sample-pane bg-danger alert" data-step="3">
+      <h4>Design Template</h4>
+      <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jÃ­cama salsify. </p>
+    </div>
+  </div>
+
+
+</div>
+

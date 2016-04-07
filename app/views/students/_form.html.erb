@@ -1,0 +1,105 @@
+
+<div class='row'>
+
+  <div class='col-xs-10'>
+    <%= form_for @student do |p| %>
+        <div class="form-group">
+
+          <div class="input-group center" align="center">
+            <span class="input-group-addon">Prenom</span>
+            <%= p.text_field :stu_name, class: 'form-control', placeholder: "Prenom", autofocus: true %>
+          </div>
+
+        </div>
+        <div class="form-group center">
+          <div class="input-group">
+            <span class="input-group-addon">Nom</span>
+            <%= p.text_field :stu_lastName, class: 'form-control', placeholder: "Nom", autofocus: true %>
+          </div>
+        </div>
+
+  <div class="form-group center">
+          <div class="input-group controls">
+            <span class="input-group-addon">Date de Naissance</span>
+            <%= p.text_field :stu_bday, :class => 'form-control', placeholder: 'DD-MM-YYYY', :id => 'datetimepicker1' %>
+
+            <script type="text/javascript">
+              $('#datetimepicker1').datetimepicker({
+                format: 'DD-MM-YYYY'
+              });</script>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <div class="input-group">
+            <span class="input-group-addon">Tipe de _document</span>
+
+            <%=  %>
+            <%= p.select(:stu_dt_id, options_from_collection_for_select(Doc_type.all, :id, :doctype_description), {include_blank: "Choisir un Document type"}, class: 'form-control', id: "placeholder-example" ) %>
+
+
+          </div>
+        </div>
+
+        <div class="form-group center">
+          <div class="input-group">
+            <span class="input-group-addon">Doc. d'identité</span>
+            <%= p.text_field :stu_doc_num, class: 'form-control', placeholder: "Doc. d'identité", autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group center">
+          <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <%= p.text_field :stu_email, class: 'form-control', placeholder: "Email", autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group center">
+          <div class="input-group">
+            <span class="input-group-addon">Maladies</span>
+            <%= p.text_field :stu_disease_id, class: 'form-control', placeholder: "Maladies", autofocus: true %>
+          </div>
+        </div>
+
+
+
+        <div class="form-group ">
+          <div class="input-group">
+            <span class="input-group-addon">Nacionalite</span>
+
+            <%=  %>
+            <%= p.select(:stu_natio_id, options_from_collection_for_select(Nacionalidad.all, :id, :description), {include_blank: "Choisir une nacionlite"}, class: 'form-control', id: "placeholder-example" ) %>
+
+
+          </div>
+
+
+
+        </div>
+
+
+        <div class="action-persone center">
+          <%= p.submit "Enregistré l' Éléve", class: "btn btn-m btn-success" %>
+
+        </div>
+
+    <% end %>
+
+  </div>
+    <% content_for :js do %>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          prettyPrint();
+          $('select#placeholder-example').select2({
+            placeholder: "Choisir une nacionlite",
+            allowClear: true
+          });
+
+
+        });
+      </script>
+  <% end %>
+</div>
+
+

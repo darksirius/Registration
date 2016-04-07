@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Table des eleve</div>
+
+  <table class="table">
+
+ <tr>
+    <th>Nom: </th>
+    <th>Prenom:</th> 
+    <th>Points</th>
+  	<th>Numero de Document: </th>
+  </tr>
+  <tr>
+<td> <%= (@student.stu_name) %></td> 
+<td> <%= (@student.stu_lastName) %> </td>
+<td> <%= (@student.stu_bday) %> </td>
+<td><%= @student.stu_doc_num %></td>
+</tr>
+</table>
+</div>

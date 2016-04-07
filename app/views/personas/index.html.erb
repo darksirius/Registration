@@ -1,0 +1,38 @@
+<h1>Liste des Persone</h1>
+
+<h3 class="center"><strong>info</strong></h3>
+
+
+<% @personas.each do |persona| %>
+
+
+      <div class="well col-s-8 col-s-offset-2">
+
+        <div class="well-m">
+
+          <div class="persona-body">
+
+            <p><strong>Nom: </strong><%= persona.apelllido %> </p>
+
+            <p><strong>Prenom: </strong><%= persona.nombre %> </p>
+
+            <p><strong>Nro. Document: </strong><%= persona.numeroDocumento %> </p>
+
+            <p><strong>Date de Naissance: </strong> <%= persona.fechaNacimiento.strftime("%d-%m-%Y") %></p>
+
+            <p><strong> Nacionaliter </strong><%= Nacionalidad.where(id: persona.nacionalidad_id).pluck(:description)%>
+
+            </p>
+
+
+          </div>
+
+          <div class="action-persone center">
+            <%= link_to "Editer cette Persone", edit_persona_path(persona), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Suprimer la persone", persona_path(persona), method: :delete, data:  {confirm: "Vous etait d'accord?"}, class: "btn btn-xs btn-danger" %>
+          </div>
+        </div>
+
+      </div>
+<% end %>
+

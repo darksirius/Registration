@@ -1,0 +1,19 @@
+<h1> Informacion enregistre </h1>
+
+
+<div class="well col-s-8 col-offset-2" >
+<h4 class="center"><strong>Infromation</strong> </h4>
+
+<p>Nom: <%= (@persona.nombre) %> </p>
+<p>Prenom: <%=@persona.apelllido %></p>
+<p>Date de naissance: <%= @persona.fechaNacimiento %></p>
+<p>Email: <%= @persona.email %></p>
+<p>Telefone Portable: <%= @persona.teleCelular %> </p>
+<p>Telefon Bureau: <%= @persona.teleOficina %></p>
+<p>Telefon Bureau: <%= @persona.teleParticular %></p>
+
+<div class="action-persone center">
+<%= link_to "Editer cette Persone", edit_persona_path(@persona), class: "btn btn-xs btn-primary"  %>
+<%= link_to "Retour sur la liste de persone", personas_path, class: "btn btn-xs btn-success" %>
+</div>
+</div>
